@@ -16,7 +16,7 @@ public class ToDoItemUpdateRequest {
 
     @JsonProperty("isCompleted")
     @ApiModelProperty(example = "true")
-    private Boolean isCompleted = null;
+    private boolean isCompleted;
 
 
     public String getText() {
@@ -27,11 +27,11 @@ public class ToDoItemUpdateRequest {
         this.text = text;
     }
 
-    public Boolean isIsCompleted() {
+    public boolean isIsCompleted() {
         return isCompleted;
     }
 
-    public void setIsCompleted(Boolean isCompleted) {
+    public void setIsCompleted(boolean isCompleted) {
         this.isCompleted = isCompleted;
     }
 

@@ -7,7 +7,7 @@ import org.springframework.validation.annotation.Validated;
 @Validated
 public class BalanceTestResult {
     @JsonProperty("input")
-    @ApiModelProperty(example = "[(]", value = "")
+    @ApiModelProperty(example = "[]", value = "")
     private final String input;
 
     @JsonProperty("isBalanced")
