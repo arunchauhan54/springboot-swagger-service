@@ -21,5 +21,6 @@
 
         ./gradlew bootRun
     
-4. ####All done. Please goto - 
+4. #### All done. Please goto
+
         http://localhost:8443/test/1.0/swagger-ui.html
