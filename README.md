@@ -13,7 +13,7 @@ If do not want to proceed with HTTPS, here is another container deployed with pl
 
 http://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:80/test/1.0/swagger-ui.html
 
-## How to run
+## How to build and run from source
 
 1.  #### clone repository
 
