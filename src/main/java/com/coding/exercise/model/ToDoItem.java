@@ -7,6 +7,7 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -23,11 +24,12 @@ public class ToDoItem implements Serializable {
 
     @Column
     @ApiModelProperty(example = "Uulwi ifis halahs gag erh'ongg w'ssh.")
+    @NotNull
     private String text = null;
 
     @Column
     @ApiModelProperty(example = "false")
-    private Boolean isCompleted = null;
+    private boolean isCompleted;
 
     @Column
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
@@ -53,11 +55,11 @@ public class ToDoItem implements Serializable {
     }
 
 
-    public Boolean isIsCompleted() {
+    public boolean isIsCompleted() {
         return isCompleted;
     }
 
-    public void setIsCompleted(Boolean isCompleted) {
+    public void setIsCompleted(boolean isCompleted) {
         this.isCompleted = isCompleted;
     }
 

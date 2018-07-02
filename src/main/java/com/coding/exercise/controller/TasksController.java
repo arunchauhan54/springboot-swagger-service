@@ -28,8 +28,7 @@ public class TasksController {
     @RequestMapping(value = "/tasks/validateBrackets",
             produces = {"application/json"},
             method = RequestMethod.GET)
-    ResponseEntity<BalanceTestResult> tasksValidateBracketsGet(@Valid @Size(min = 1, max = 50)
-                                                               @ApiParam(value = "Input string (max length 50)")
+    ResponseEntity<BalanceTestResult> tasksValidateBracketsGet(@ApiParam(value = "Input string")
                                                                @RequestParam(value = "input") String input) {
         return new ResponseEntity<>(BalancedBracket.isBalancedBrackets(input), HttpStatus.OK);
     }

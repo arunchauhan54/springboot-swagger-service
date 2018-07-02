@@ -7,6 +7,7 @@ import java.util.Stack;
 public class BalancedBracket {
 
     public static BalanceTestResult isBalancedBrackets(String value) {
+        value = value.trim();
         Stack<Character> stack = new Stack<>();
         char upperElement = 0;
         for (int i = 0; i < value.length(); i++) {

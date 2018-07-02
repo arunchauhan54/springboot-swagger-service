@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 
@@ -13,6 +14,7 @@ public class ToDoItemAddRequest {
     @JsonProperty("text")
     @ApiModelProperty(example = "Uulwi ifis halahs gag erh'ongg w'ssh.")
     @Size(min = 1, max = 50)
+    @NotNull
     private String text = null;
 
     public String getText() {

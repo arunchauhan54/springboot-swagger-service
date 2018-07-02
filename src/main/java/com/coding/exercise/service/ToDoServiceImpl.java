@@ -39,8 +39,12 @@ public class ToDoServiceImpl implements ToDoService {
     @Override
     public ToDoItem update(BigDecimal id, ToDoItemUpdateRequest request) {
         ToDoItem toDoItem = find(id);
-        toDoItem.setText(request.getText());
-        toDoItem.setIsCompleted(request.isIsCompleted());
+        if (request.getText() != null) {
+            toDoItem.setText(request.getText());
+        }
+        if (request.isIsCompleted() != null) {
+            toDoItem.setIsCompleted(request.isIsCompleted());
+        }
         return toDoRepository.save(toDoItem);
     }
 }
