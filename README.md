@@ -1,4 +1,7 @@
 # springboot-swagger-service
+implementation of API for
+1. General algorithmic tasks endpoint
+2. To Do List endpoints
 
 
 ## How to run
@@ -24,3 +27,15 @@
 4. #### All done. Please goto
 
         http://localhost:8443/test/1.0/swagger-ui.html
+        
+
+## Assumptions
+
+1.  **Provide here**
+
+  detail will go here.
+
+
+ 
+## What better can be done in version 2.0
+* provide thoughts. 
