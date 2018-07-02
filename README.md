@@ -1,16 +1,18 @@
 # springboot-swagger-service
 
-implementation of API for
-1. General algorithmic tasks endpoint
+implementation of API endpoints for
+1. General algorithmic tasks
 2. To Do List endpoints
 
 Live URL
-Supports HTTPS, certificate is self signed so browser will give warning but you can safely proceed.
 
-https://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:8080/test/1.0/swagger-ui.html
+**Supports HTTPS** https://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:8080/test/1.0/swagger-ui.html
 
-If do not want to proceed with HTTPS, here is another container deployed with plain HTTP support
+>certificate is self signed so browser will give warning but you can click advance button and safely proceed.
 
+>If do not want to proceed with HTTPS, here is another container running with plain HTTP support
+
+**Supports HTTP**
 http://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:80/test/1.0/swagger-ui.html
 
 ## How to build and run from source
@@ -40,11 +42,20 @@ http://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:80/test/1.0/swagger
 
 ## Assumptions
 
-1.  **Provide here**
-
-  detail will go here.
-
+* Configuring JWT was not part of exercise**
+* load balancing and multiple node deployment is not needed**
+* Its fine too use self sign certificate for https communication**
 
  
 ## What better can be done in version 2.0
-* provide thoughts. 
+
+* Logging support should be added.
+* Rest should use hateoas to add related link of subject as part of response.
+* Exception handling should be improved to handled few other scenarios.
+* More test case for patch and validation exception.
+
+> A request : while running integration testing from client provided link i realised that its failing because of self sign 
+https certificate. Please do testing directly from swagger UI.
+
+> Client provided link was returning response for scheme as HTTPS so only assuming that as expected behavior I have also exposed 
+docker port of HTTPS only.
