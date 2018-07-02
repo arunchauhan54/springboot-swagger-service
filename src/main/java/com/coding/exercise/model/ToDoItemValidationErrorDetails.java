@@ -6,16 +6,20 @@ import org.springframework.validation.annotation.Validated;
 @Validated
 public class ToDoItemValidationErrorDetails {
     @ApiModelProperty(example = "params")
-    private final String location;
+    private String location;
 
     @ApiModelProperty(example = "text")
-    private final String param;
+    private String param;
 
     @ApiModelProperty(example = "Must be between 1 and 50 chars long")
-    private final String msg;
+    private String msg;
 
     @ApiModelProperty(example = "input value")
-    private final String value;
+    private String value;
+
+    public ToDoItemValidationErrorDetails() {
+        super();
+    }
 
     public ToDoItemValidationErrorDetails(String location, String param, String msg, String value) {
         this.location = location;

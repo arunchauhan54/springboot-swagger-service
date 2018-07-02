@@ -10,10 +10,14 @@ import java.util.List;
 @Validated
 public class ToDoItemValidationError {
     @Valid
-    private final List<ToDoItemValidationErrorDetails> details;
+    private List<ToDoItemValidationErrorDetails> details;
 
     @ApiModelProperty(example = "ValidationError")
-    private final String name;
+    private String name;
+
+    public ToDoItemValidationError() {
+        super();
+    }
 
     public ToDoItemValidationError(@Valid List<ToDoItemValidationErrorDetails> details, String name) {
         this.details = details;

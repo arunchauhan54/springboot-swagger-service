@@ -37,7 +37,7 @@ public class ToDoController {
     @PostMapping(value = "/todo",
             produces = {"application/json"},
             consumes = {"application/json"})
-    public ResponseEntity<ToDoItem> getToDo(@ApiParam(required = true) @Valid @RequestBody ToDoItemAddRequest body) {
+    public ResponseEntity<ToDoItem> saveToDo(@ApiParam(required = true) @Valid @RequestBody ToDoItemAddRequest body) {
         return new ResponseEntity<>(toDoService.save(body), HttpStatus.OK);
     }
 
@@ -50,8 +50,8 @@ public class ToDoController {
     @PatchMapping(value = "/todo/{id}",
             produces = {"application/json"},
             consumes = {"application/json"})
-    ResponseEntity<ToDoItem> todoIdPatch(@ApiParam(required = true) @PathVariable() BigDecimal id,
-                                         @ApiParam(required = true) @Valid @RequestBody ToDoItemUpdateRequest request) {
+    ResponseEntity<ToDoItem> patchToDo(@ApiParam(required = true) @PathVariable() BigDecimal id,
+                                       @ApiParam(required = true) @Valid @RequestBody ToDoItemUpdateRequest request) {
         return new ResponseEntity<>(toDoService.update(id, request), HttpStatus.OK);
     }
 

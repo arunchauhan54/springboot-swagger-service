@@ -10,7 +10,11 @@ public class ToDoItemNotFoundErrorDetails {
 
     @JsonProperty("message")
     @ApiModelProperty(example = "Item with 9 not found")
-    private final String message;
+    private String message;
+
+    public ToDoItemNotFoundErrorDetails() {
+        super();
+    }
 
     public ToDoItemNotFoundErrorDetails(String message) {
         this.message = message;
@@ -19,6 +23,7 @@ public class ToDoItemNotFoundErrorDetails {
     public String getMessage() {
         return message;
     }
+
 
 }
 

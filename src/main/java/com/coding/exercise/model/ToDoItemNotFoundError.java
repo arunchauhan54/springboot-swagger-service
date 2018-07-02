@@ -11,11 +11,15 @@ import java.util.List;
 public class ToDoItemNotFoundError {
     @JsonProperty("details")
     @Valid
-    private final List<ToDoItemNotFoundErrorDetails> details;
+    private List<ToDoItemNotFoundErrorDetails> details;
 
     @JsonProperty("name")
     @ApiModelProperty(example = "NotFoundError")
-    private final String name;
+    private String name;
+
+    public ToDoItemNotFoundError() {
+        super();
+    }
 
     public ToDoItemNotFoundError(@Valid List<ToDoItemNotFoundErrorDetails> details, String name) {
         this.details = details;
