@@ -1,4 +1,4 @@
-# springboot-swagger-service
+# TODO endpoints
 
 implementation of API endpoints for
 1. General algorithmic tasks
@@ -42,9 +42,9 @@ http://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:80/test/1.0/swagger
 
 ## Assumptions
 
-* Configuring JWT was not part of exercise**
-* load balancing and multiple node deployment is not needed**
-* Its fine too use self sign certificate for https communication**
+* Configuring JWT is not part of exercise
+* Load balancing and multiple node deployment is not needed
+* Its fine to use self sign certificate for https communications
 
  
 ## What better can be done in version 2.0
@@ -54,8 +54,8 @@ http://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:80/test/1.0/swagger
 * Exception handling should be improved to handled few other scenarios.
 * More test case for patch and validation exception.
 
-> A request : while running integration testing from client provided link i realised that its failing because of self sign 
-https certificate. Please do testing directly from swagger UI.
+> A request : while running integration testing from client provided link i realised that because of my self sign https
+ certificate its failing.Please do testing directly from swagger UI. 
 
-> Client provided link was returning response for scheme as HTTPS so only assuming that as expected behavior I have also exposed 
-docker port of HTTPS only.
+> Client provided link was returning response for scheme as HTTPS so assuming that as expected behavior I have also exposed 
+docker container port for HTTPS only.
