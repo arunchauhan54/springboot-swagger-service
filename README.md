@@ -57,5 +57,5 @@ http://ec2-13-211-167-3.ap-southeast-2.compute.amazonaws.com:80/test/1.0/swagger
 > A request : while running integration testing from client provided link, i realised that because of my self sign 
 https certificate integration test not giving correct results. Please do testing directly from swagger UI. 
 
-> Client provided link was returning response for scheme as HTTPS so assuming that as expected behavior I have also 
-exposed docker container port for HTTPS only.
+> Client provided link was returning response only if scheme selected as HTTPS so assuming that as expected behavior 
+I have also exposed docker container port for HTTPS only.
